@@ -73,9 +73,7 @@ function bindLoansToDropDown(){
         opt.value = eachApplicants.applicantname.toString();
         dropDown.appendChild(opt);
 
-        if (dropDown[1].value){
-            document.getElementById('fullName').innerText = eachApplicants.applicantname[0];
-        };
+        dropDown = document.addEventListener('')
     }
 };
 bindLoansToDropDown();
