@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+
+    <head>
+        <title>LOAN APPLICATION</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="loan-form">
+            <form action="" id="individual">
+                <h1>Apply To Get Loan!</h1>
+
+                <!--SELECT OPTION-->
+                <select name="" id="loanApplications" class="selection">
+                    <option value="" id="option">...Select an Application...</option>
+                </select>
+                <hr><br>
+
+                <!--NAME FIELD-->
+                <label for="fullName" class="labelField">Full name and title</label>
+                <input type="text" placeholder="Enter Full Name" class="textFields labelField" id="fullName" maxlength="100"><br>
+                <div class="labelField display" id="for-fullname">
+                    <p style="font-style: italic; font-weight: bold; margin-top: 0%;">Name is required</p>
+                </div>
+
+                <!--DATE OF BIRTH FIELD-->
+                <label for="dateOfBirth" style="margin-right:38px;" class="labelField">Date of Birth</label>
+                <input type="text" placeholder="dd/mm/yyyy" class="textFields labelField" style="margin-left: 5px;" id="dateOfBirth" maxlength="10"><br>
+                <div class="labelField display" id="for-dateOfBirth">
+                    <p style="font-style: italic; font-weight: bold; margin-top: 0%;">Date of Birth is required</p>
+                </div>
+
+                <!--INCOME FIELD-->
+                <label for="incomeField" style="margin-right:25px;" class="labelField">Annual Income</label>
+                <input type="text" placeholder="Enter Your Monthly Income" class="textFields labelField" id="incomeField" maxlength="8"><br>
+                <div class="labelField display" id="for-incomeField">
+                    <p style="font-style: italic; font-weight: bold; margin-top: 0%;">Income is required</p>
+                </div>
+                
+                <!--CREDIT SCORE -->
+                <label for="credit score" class="labelField Cscore-label">Credit Score</label>
+                <input type="text" placeholder="Enter Credit Score" class="textFields labelField Cscore-Field" id="credit-score" maxlength="3">
+                <div class="labelField display" id="for-creditscore">
+                    <p style="font-style: italic; font-weight: bold; margin-top: 0%; margin-left: 45px;">Credit Score is Required</p>
+                </div>
+
+                <!--LOAN PURPOSE-->
+                <div class="loan-purpose">
+                    <label for="loanPurpose" class="labelField labelTextarea">What will you use this loan for</label>
+                    <textarea name="" id="loanPurpose" cols="30" rows="10" class="textarea labelField" placeholder="Enter Purpose for Loan"></textarea>
+                </div><br>
+                <div class="labelField display" id="for-loanPurpose">
+                    <p style="font-style: italic; font-weight: bold; margin-top: -1%; margin-left: 11%;">Purpose is required</p>
+                </div>
+
+                <!--LOAN AMOUNT-->
+                <div class="loanAmount" style="margin-left: 2%;">
+                    <label for="loan-amount"  class="labelField loanLabel">How much do you want to borrow</label>
+                    <input type="text" class="loanArea labelField" id="loanAmount" placeholder="Enter Loan Amount" maxlength="8">
+                </div>
+                <div class="labelField display" id="for-loanAmount">
+                    <p style="font-style: italic; font-weight: bold; margin-top: 55px; margin-left: 16%; margin-bottom: 27px;">Loan amount is required</p>
+                </div><br><br><hr>
+                
+                <!--BUTTONS-->
+                <div class="buttons">
+                    <button type="reset" class="btn-reset" id="btn-reset">Clear</button>
+                    <button type="submit" class="btn-apply" id="btn-apply">Apply</button>
+                </div>
+            </form>
+
+            <!--LOAN APPLICATION STATUS-->
+            <label class="loanStatus labelField" id="loanStatus">
+                
+            </label>
+            
+        </div>
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>
