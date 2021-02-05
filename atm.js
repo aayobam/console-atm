@@ -1,7 +1,8 @@
+//This is a simple javascript ATM program that performs basic ATM transactions operations
+
 let accountBalance = parseFloat([1000]), depositAmount, withdrawAmount, transferAmount, rechargeAmount, phone_no, selection, action;
 
-
-//this authenticates the user after supplying their pin code.
+//This authenticates the registered user after supplying their pin code.
 function Authentication(){
     let LoginAcess = [
         {"name" : "bradly cooper", "pass" : 1990},
@@ -10,14 +11,14 @@ function Authentication(){
     ];
 
     let pin = prompt("enter your 4 digit pin number".toUpperCase()); // pin is input taken from user.
-    let userName = (LoginAcess.find(({ pass }) => pass === parseInt(pin))["name"]).toUpperCase();//this finds the user associated with a pin
-    console.log(" Welcome " + userName +"\n perform operation by select 1.....6".toUpperCase());
+    let userName = (LoginAcess.find(({ pass }) => pass === parseInt(pin))["name"]).toUpperCase();//this finds and compare the user associated with a pin
+    console.log(" Welcome " + userName +"\n perform operation by selecting between 1 to 6 ".toUpperCase());
     main();
 };
 Authentication();
 
 
-//this checks for the initial account balance
+// This checks for the initial account balance
 function checkBalance(){
     console.log("your account balance is : " + "$" + accountBalance)
     action = prompt("would you like to perform another operation?".toUpperCase());
@@ -30,7 +31,7 @@ function checkBalance(){
 };
 
 
-//this handles deposit of money or funds.
+// This handles deposit of money or funds.
 function deposit(){
     depositAmount = parseFloat(prompt("enter deposit amount"))
     accountBalance += depositAmount;
@@ -46,7 +47,7 @@ function deposit(){
 };
 
 
-//this block handles withdrawal of funds
+// This block handles withdrawal of funds
 function withdrawal(){
     withdrawAmount = parseFloat(prompt("enter withdrawal amount".toUpperCase()));
     if (withdrawAmount <= accountBalance){
@@ -68,7 +69,7 @@ function withdrawal(){
 };
 
 
-//rhis block handles funds transfer.
+// This block handles funds transfer.
 function transfers(){
     transferAmount = parseFloat(prompt("enter transfer amount".toUpperCase()))
     if(transferAmount <= accountBalance){
@@ -89,12 +90,12 @@ function transfers(){
 };
 
 
-//this block handles airtime recharge.
+// This block handles airtime recharge.
 function airtimeRecharge(){
-    let number = ["0","1","2","4","5","6","7","8","9","0","1"]
+    let number = ["0","1","2","4","5","6","7","8","9","0","1"] //This logic is just to use its length to check validity of phone number,the values in the array doesn't compute values
     console.log(number.length)
-    phone_no = parseInt(prompt("enter you 11 digit phone number".toUpperCase()));
-    rechargeAmount = parseFloat(prompt("enter amount you want to recharge".toUpperCase()));
+    phone_no = parseInt(prompt("enter your 11 digit phone number : ".toUpperCase()));
+    rechargeAmount = parseFloat(prompt("enter amount you want to recharge : ".toUpperCase()));
     if (rechargeAmount <= accountBalance && phone_no == number.length) {
         accountBalance -= rechargeAmount;
         console.log("you have recharged " + phone_no + " with " + "$" + transferAmount + " and your new balance is " + "$" + accountBalance);
@@ -109,12 +110,14 @@ function airtimeRecharge(){
     }
     else{
         console.log("thanks for bannking with us".toUpperCase());
+        exit();
     };
 };
 
 
 function cancelTransaction(){
     console.log("thanks for bannking with us".toUpperCase());
+    exit();
 };
 
 
