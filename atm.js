@@ -12,7 +12,7 @@ function Authentication(){
 
     let pin = prompt("enter your 4 digit pin number".toUpperCase()); // pin is input taken from user.
     let userName = (LoginAcess.find(({ pass }) => pass === parseInt(pin))["name"]).toUpperCase();//this finds and compare the user associated with a pin
-    console.log(" Welcome " + userName +"\n perform operation by selecting between 1 to 6 ".toUpperCase());
+    console.log(" Welcome " + userName +"\n perform operation by selecting between 1 to 6 : ".toUpperCase());
     main();
 };
 Authentication();
